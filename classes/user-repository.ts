@@ -14,9 +14,6 @@ export class UsersRepository{
         let user = this.list.find(u=>u.id === id)
         if(user)
             user.name = name;
-
-        console.log('-------Actualizando usuario------------')
-        console.log(this.list)
     }
 
     public getUsersList(): User[] {

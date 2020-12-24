@@ -35,7 +35,6 @@ export default class Server{
     private listenSockets(){
         console.log('listening sockets');
         this.io.on('connection', client=>{
-            console.log('usuario conectado', client.id)
             //Conectar cliente
             socket.connectClient(client);
             //login
