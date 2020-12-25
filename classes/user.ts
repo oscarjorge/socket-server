@@ -4,7 +4,7 @@ export class User{
     public room: string;
     constructor(id: string){
         this.id = id;
-        this.name = 'no login',
+        this.name = 'no name',
         this.room = 'no room'
     }
 }

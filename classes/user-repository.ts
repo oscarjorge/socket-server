@@ -17,7 +17,7 @@ export class UsersRepository{
     }
 
     public getUsersList(): User[] {
-        return this.list;
+        return this.list.filter(u=>u.name!=='no name');
     }
 
     public getUser(id: string): User | undefined {

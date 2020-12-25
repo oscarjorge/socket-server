@@ -36,11 +36,13 @@ export default class Server{
         console.log('listening sockets');
         this.io.on('connection', client=>{
             //Conectar cliente
-            socket.connectClient(client);
+            socket.connectClient(client, this.io);
             //login
             socket.login(client, this.io);
+            //Obtener usuariuos activos
+            socket.getUsers(client, this.io);
             //Desconectar
-            socket.disconnect(client);
+            socket.disconnect(client, this.io);
             //Escuchar mensajes
             socket.message(client, this.io);
             
